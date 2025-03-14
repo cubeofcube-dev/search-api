@@ -1,0 +1,11 @@
+pydantic
+python-dotenv
+requests
+requests-html
+lxml_html_clean
+bs4
+duckduckgo_search==7.5.1
+openai
+fastapi
+uvicorn
+redis

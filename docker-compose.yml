@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      - TZ=Asia/Shanghai
+    env_file:
+      - .env
+    network_mode: "host"
+
+  redis:
+    image: redis:latest
+    command: redis-server --port 6379
+    # ports:
+    #   - 6379:6379
+    # volumes:
+    #   - ./data/redis:/data
+    environment:
+      - TZ=Asia/Shanghai
+    network_mode: "host"
